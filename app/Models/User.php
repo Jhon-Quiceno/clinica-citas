@@ -45,4 +45,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function secretarias ()
+    {
+        return $this->hasMany(Secretaria::class);
+    }
 }
