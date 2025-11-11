@@ -44,5 +44,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'paciente@admin.com',
             'password' => Hash::make('admin123'),
         ]);
+
+        $this->call(PacienteSeeder::class);
     }
 }
