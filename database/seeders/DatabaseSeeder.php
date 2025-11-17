@@ -45,6 +45,10 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('admin123'),
         ]);
 
-        $this->call(PacienteSeeder::class);
+        $this->call([
+            ConsultorioSeeder::class,
+            PacienteSeeder::class,
+            DoctorSeeder::class,
+        ]);
     }
 }
