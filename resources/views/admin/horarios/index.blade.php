@@ -111,6 +111,7 @@
             </div>
         </div>
     </div>
+    <br>
     <div class="row">
         <div class="col-md-12">
             <div class="card card-outline card-primary">
@@ -146,10 +147,10 @@
 
                         // Función para cargar el calendario
                         function cargarCalendario(consultorio_id) {
-                            var url = "{{ route('admin.horarios.cargar_datos_consultorios',':id') }}";
-                            url = url.replace(':id', consultorio_id);
+                            //var url = "{{ route('admin.horarios.cargar_datos_consultorios',':id') }}";
+                            //url = url.replace(':id', consultorio_id);
                             $.ajax({
-                                url: url,
+                                url: "{{ url('/admin/horarios/consultorios') }}" + '/' + consultorio_id,
                                 type: 'GET',
                                 success: function(data) {
                                     $('#consultorio_info').html(data);
