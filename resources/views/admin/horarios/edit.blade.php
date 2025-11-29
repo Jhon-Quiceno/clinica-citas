@@ -124,14 +124,6 @@
         var doctorOriginal = {{ $horario->doctor_id }};
         var todosLosDoctores = @json($doctores);
 
-        // Cargar el calendario y doctores al abrir la vista
-        $(document).ready(function() {
-            var consultorio_id = $('#consultorio_select').val();
-            if(consultorio_id) {
-                cargarCalendario(consultorio_id);
-                cargarDoctoresConsultorio(consultorio_id);
-            }
-        });
 
         // Función para cargar el calendario
         function cargarCalendario(consultorio_id) {

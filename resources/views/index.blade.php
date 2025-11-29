@@ -183,6 +183,7 @@
                               </div>
                               <div class="col-md-4">
                                   <select name="consultorio_id" id="consultorio_select" class="form-control">
+                                      <option value="">Selecciona consultorio</option>
                                       @foreach($consultorios as $consultorio)
                                           <option value="{{ $consultorio->id }}">{{ $consultorio->nombre." - ".$consultorio->ubicacion }}</option>
                                       @endforeach
@@ -193,19 +194,8 @@
                       <!-- /.card-body -->
                       <div class="card-body">
                           <script>
-                              // Cargar el calendario al abrir la vista con el primer consultorio
-                              $(document).ready(function() {
-                                  var consultorio_id = $('#consultorio_select').val();
-                                  if(consultorio_id) {
-                                      cargarCalendario(consultorio_id);
-                                  }
-                              });
-
                               // Función para cargar el calendario
                               function cargarCalendario (consultorio_id) {
-                                  //var url = "{{ route('cargar_datos_consultorios',':id') }}";
-                                  //url = url.replace(':id', consultorio_id);
-
                                   $.ajax({
                                       url: "{{ url('/consultorios/') }}" + '/' + consultorio_id,
                                       type: 'GET',
@@ -218,16 +208,15 @@
                                   });
                               }
 
-
-                                  // Manejar el cambio de consultorio
-                                  $('#consultorio_select').on('change', function () {
-                                      var consultorio_id = $('#consultorio_select').val();
-                                      if (consultorio_id) {
-                                          cargarCalendario(consultorio_id);
-                                      } else {
-                                          $('#consultorio_info').html('');
-                                      }
-                                  });
+                              // Manejar el cambio de consultorio
+                              $('#consultorio_select').on('change', function () {
+                                  var consultorio_id = $('#consultorio_select').val();
+                                  if (consultorio_id) {
+                                      cargarCalendario(consultorio_id);
+                                  } else {
+                                      $('#consultorio_info').html('');
+                                  }
+                              });
                           </script>
                           <hr>
                           <div class="table-responsive">

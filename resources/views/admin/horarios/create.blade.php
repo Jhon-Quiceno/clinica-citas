@@ -119,14 +119,6 @@
     <script>
         var todosLosDoctores = @json($doctores);
 
-        // Cargar el calendario al abrir la vista si hay un consultorio seleccionado
-        $(document).ready(function() {
-            var consultorio_id = $('#consultorio_select').val();
-            if(consultorio_id) {
-                cargarCalendario(consultorio_id);
-                cargarDoctoresConsultorio(consultorio_id);
-            }
-        });
 
         // Función para cargar el calendario
         function cargarCalendario(consultorio_id) {

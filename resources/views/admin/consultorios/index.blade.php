@@ -23,7 +23,7 @@
                         <thead style="background-color: #b1b1d5">
                         <tr>
                             <td style="text-align: center"><b>Nro</b></td>
-                            <td style="text-align: center"><b>Nombre</b></td>
+                            <td style="text-align: center"><b>Consultorio</b></td>
                             <td style="text-align: center"><b>Ubicación</b></td>
                             <td style="text-align: center"><b>Capacidad</b></td>
                             <td style="text-align: center"><b>Teléfono</b></td>
