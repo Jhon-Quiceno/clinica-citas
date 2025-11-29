@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Consultorio;
 use App\Models\Doctor;
+use App\Models\Event;
 use App\Models\Horario;
 use App\Models\Paciente;
 use App\Models\Secretaria;
@@ -21,6 +22,8 @@ class AdminController extends Controller
         $total_horarios = Horario::count();
 
         $consultorios = Consultorio::all();
+        $doctores = Doctor::all();
+        $eventos = Event::all();
 
         return view('admin.index', compact('total_usuarios',
             'total_secretarias',
@@ -28,7 +31,14 @@ class AdminController extends Controller
             'total_consultorios',
             'total_doctores',
             'total_horarios',
-            'consultorios'
+            'consultorios',
+            'doctores',
+            'eventos'
         ));
+    }
+
+    public function ver_reservas($id) {
+        $eventos = Event::where('user_id', $id)->get();
+        return view('admin.ver_reservas', compact('eventos'));
     }
 }
