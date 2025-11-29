@@ -27,46 +27,46 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('admin123'),
         ])->assignRole('admin');
 
-        User::create([
-            'name' => 'Secretaria',
-            'email' => 'secretaria@admin.com',
-            'password' => Hash::make('admin123'),
-        ])->assignRole('secretaria');
+//        User::create([
+//            'name' => 'Secretaria',
+//            'email' => 'secretaria@admin.com',
+//            'password' => Hash::make('admin123'),
+//        ])->assignRole('secretaria');
+//
+//        Secretaria::create([
+//            'nombres' => 'Secretaria',
+//            'apellidos' => 'Miraflorez',
+//            'identificacion' => '1234567890',
+//            'telefono' => '0987654321',
+//            'fecha_nacimiento' => '10/10/1990',
+//            'direccion' => 'Calle Falsa 123',
+//            'user_id' => '2'
+//        ]);
+//
+//        User::create([
+//            'name' => 'Doctor',
+//            'email' => 'doctor@admin.com',
+//            'password' => Hash::make('admin123'),
+//        ])->assignRole('doctor');
+//
+//        User::create([
+//            'name' => 'Paciente',
+//            'email' => 'paciente@admin.com',
+//            'password' => Hash::make('admin123'),
+//        ])->assignRole('paciente');
+//
+//        User::create([
+//            'name' => 'Usuario',
+//            'email' => 'usuario@admin.com',
+//            'password' => Hash::make('admin123'),
+//        ])->assignRole('usuario');
 
-        Secretaria::create([
-            'nombres' => 'Secretaria',
-            'apellidos' => 'Miraflorez',
-            'identificacion' => '1234567890',
-            'telefono' => '0987654321',
-            'fecha_nacimiento' => '10/10/1990',
-            'direccion' => 'Calle Falsa 123',
-            'user_id' => '2'
-        ]);
-
-        User::create([
-            'name' => 'Doctor',
-            'email' => 'doctor@admin.com',
-            'password' => Hash::make('admin123'),
-        ])->assignRole('doctor');
-
-        User::create([
-            'name' => 'Paciente',
-            'email' => 'paciente@admin.com',
-            'password' => Hash::make('admin123'),
-        ])->assignRole('paciente');
-
-        User::create([
-            'name' => 'Usuario',
-            'email' => 'usuario@admin.com',
-            'password' => Hash::make('admin123'),
-        ])->assignRole('usuario');
-
-        // Finalmente se cargan los otros seeders
-        $this->call([
-            ConsultorioSeeder::class,
-            PacienteSeeder::class,
-            DoctorSeeder::class,
-            HorarioSeeder::class,
-        ]);
+//        // Finalmente se cargan los otros seeders
+//        $this->call([
+//            ConsultorioSeeder::class,
+//            PacienteSeeder::class,
+//            DoctorSeeder::class,
+//            HorarioSeeder::class,
+//        ]);
     }
 }

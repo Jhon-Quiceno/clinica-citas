@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Consultorio;
+use App\Models\Doctor;
 use App\Models\Event;
 use App\Models\Horario;
 use Illuminate\Http\Request;
@@ -13,7 +14,9 @@ class WebController extends Controller
     public function index()
     {
         $consultorios = Consultorio::all();
-        return view('index', compact('consultorios'));
+        $doctores = Doctor::limit(4)->get();
+        $especialidades = Doctor::distinct()->pluck('especialidad')->filter();
+        return view('index', compact('consultorios', 'doctores', 'especialidades'));
     }
 
     public function cargar_datos_consultorios ($id)

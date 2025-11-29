@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <!-- Background -->
+  <rect width="192" height="192" fill="#0d6efd" rx="40"/>
+
+  <!-- Medical Cross -->
+  <g fill="white">
+    <!-- Vertical bar of cross -->
+    <rect x="78" y="40" width="36" height="112" rx="6"/>
+    <!-- Horizontal bar of cross -->
+    <rect x="40" y="78" width="112" height="36" rx="6"/>
+  </g>
+
+  <!-- Heart accent -->
+  <path d="M 150 50 Q 160 45 165 55 Q 170 65 155 80 Q 145 70 150 50" fill="#ff6b6b" opacity="0.9"/>
+</svg>
+
